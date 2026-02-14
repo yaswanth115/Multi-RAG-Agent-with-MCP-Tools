@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent RAG Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/marked/marked.min.js" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>Multi-Agent RAG Assistant</h1>
+                </div>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h2>Document Upload</h2>
+                    </div>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Drag & drop your document here or <span class="upload-link">browse files</span></p>
+                            <input type="file" id="fileInput" accept=".pdf,.txt,.doc,.docx">
+                        </div>
+                    </div>
+                    <button class="upload-btn" onclick="uploadFile()" id="uploadBtn">
+                        <i class="fas fa-upload"></i>
+                        Upload Document
+                    </button>
+                    <div class="upload-status" id="uploadStatus"></div>
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h2><i class="fas fa-comments"></i> Chat Assistant</h2>
+                        <button class="clear-chat-btn" onclick="clearChat()" title="Clear Chat">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="chat-messages" id="chatBox">
+                        <div class="welcome-message">
+                            <div class="bot-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your Multi-Agent RAG Assistant. Upload a document and ask me questions about its content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <div class="input-wrapper">
+                            <input type="text" id="queryInput" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
+                            <button class="send-btn" onclick="sendQuery()" id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

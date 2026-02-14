@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+langgraph
+langchain
+langchain-text-splitters
+groq
+sentence-transformers
+faiss-cpu
+rank-bm25
+python-multipart
+pydantic
+pymupdf
+numpy
+scikit-learn
+duckduckgo-search
+python-dotenv
