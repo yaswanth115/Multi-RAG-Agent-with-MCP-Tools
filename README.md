@@ -7,6 +7,7 @@ Step2: Create the Virtual Environment and Activate it
 ● Source venv/bin/activate
 
 Step 3: Go to Groq API keys(free source) https://console.groq.com/keys
+
 ● Sign up with Gmail and create a API and copy it
 ● Create a .env file in project folder store the API key which you have copied before
 ● In Groq there are lot of models which is free , you can use any models.
